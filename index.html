@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" data-accent="purple">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetherist Market — Premium Digital Products. Instant Delivery. 24/7 Support.</title>
+  <meta name="description" content="Aetherist Market — Premium digital products. Instant delivery. 24/7 support.">
+  <meta name="theme-color" content="#050508">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aetherist Market">
+  <meta property="og:title" content="Aetherist Market — Enter the Aether">
+  <meta property="og:description" content="Aetherist Market — Premium digital products. Instant delivery. 24/7 support.">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aetherist Market — Enter the Aether">
+  <meta name="twitter:description" content="Aetherist Market — Premium digital products. Instant delivery. 24/7 support.">
+  <meta name="twitter:image" content="assets/img/og-image.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ============================== PRELOADER ============================== -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <svg class="preloader-logo" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="lgp" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#8B5CF6"/>
+          <stop offset="0.5" stop-color="#A855F7"/>
+          <stop offset="1" stop-color="#22D3EE"/>
+        </linearGradient>
+      </defs>
+      <path class="draw" pathLength="100" d="M32 4 L60 60 H47.2 L32 27.5 L16.8 60 H4 Z"
+            stroke="url(#lgp)" stroke-width="3" stroke-linejoin="round"/>
+      <path class="draw draw-2" pathLength="100" d="M21.5 42.5 H42.5 L45.5 49.5 H18.5 Z"
+            stroke="url(#lgp)" stroke-width="3" stroke-linejoin="round"/>
+    </svg>
+    <div class="preloader-count" id="preloader-count">0%</div>
+    <div class="preloader-hint">click to skip</div>
+  </div>
+
+  <!-- ========================== CURSOR / PROGRESS ========================== -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"><span class="cursor-label" id="cursor-label"></span></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ================================ NAVBAR =============================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="#hero" aria-label="Aetherist Market — back to top" data-cursor="VIEW">
+        <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="lgn" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#8B5CF6"/>
+              <stop offset="0.5" stop-color="#A855F7"/>
+              <stop offset="1" stop-color="#22D3EE"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4 L60 60 H47.2 L32 27.5 L16.8 60 H4 Z" fill="url(#lgn)"/>
+          <path d="M21.5 42.5 H42.5 L45.5 49.5 H18.5 Z" fill="url(#lgn)"/>
+        </svg>
+        <span class="brand-name">AETHERIST</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#hero" data-spy-link data-cursor="VIEW">Home</a>
+        <a href="#product" data-spy-link data-cursor="BUY">Product</a>
+        <a href="#features" data-spy-link>Features</a>
+        <a href="#status" data-spy-link>Status</a>
+        <a href="#reviews" data-spy-link>Reviews</a>
+        <a href="#faq" data-spy-link>FAQ</a>
+        <a href="pages/terms.html">Terms</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost btn-sm" href="https://aetherist-market.mysellauth.com/" target="_blank" rel="noopener noreferrer" data-cursor="BUY">Shop Now</a>
+        <a class="btn btn-primary btn-sm btn-glow" href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer" data-cursor="JOIN">Join Discord</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile full-screen menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="#hero">Home</a>
+    <a href="#product">Product</a>
+    <a href="#features">Features</a>
+    <a href="#status">Status</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="pages/terms.html">Terms</a>
+    <div class="mobile-menu-footer">
+      <a class="btn btn-primary btn-sm" href="https://aetherist-market.mysellauth.com/" target="_blank" rel="noopener noreferrer">Visit Shop</a>
+      <a class="btn btn-glass btn-sm" href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer">Join Discord</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================== 5.4 HERO ============================== -->
+    <section class="hero section" id="hero" data-spy-section>
+      <canvas class="hero-particles" data-particles aria-hidden="true"></canvas>
+      <div class="aurora aurora-1" data-parallax="0.10" aria-hidden="true"></div>
+      <div class="aurora aurora-2" data-parallax="-0.08" aria-hidden="true"></div>
+      <div class="aurora aurora-3" data-parallax="0.06" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <span class="eyebrow" data-reveal><span class="pulse-dot" aria-hidden="true"></span>PREMIUM DIGITAL MARKETPLACE</span>
+
+        <h1 class="hero-title" data-reveal style="--reveal-delay:90ms">
+          ENTER THE <span class="gradient-text glitch-hover" data-text="AETHER">AETHER</span>
+        </h1>
+
+        <p class="hero-sub" data-reveal style="--reveal-delay:180ms">
+          <span data-typewriter data-phrases='["Instant Delivery.", "Trusted Sellers.", "24/7 Support.", "AetheristTTK Available Now."]'></span><span class="caret" aria-hidden="true"></span>
+        </p>
+
+        <div class="hero-cta" data-reveal style="--reveal-delay:270ms">
+          <a class="btn btn-primary btn-lg" data-magnetic data-cursor="BUY"
+             href="https://aetherist-market.mysellauth.com/" target="_blank" rel="noopener noreferrer">Visit Shop</a>
+          <a class="btn btn-glass btn-lg" data-magnetic data-cursor="JOIN"
+             href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        </div>
+
+        <dl class="hero-stats" data-reveal-stagger style="--reveal-delay:360ms">
+          <div class="stat"><dd><span data-counter data-target="1000">0</span>+</dd><dt>Members</dt></div>
+          <div class="stat"><dd>∞</dd><dt>Stock</dt></div>
+          <div class="stat"><dd><span data-counter data-target="24">0</span>/7</dd><dt>Support</dt></div>
+          <div class="stat"><dd>€<span data-counter data-target="7" data-decimals="2">0.00</span></dd><dt>Entry Price</dt></div>
+        </dl>
+      </div>
+
+      <a class="scroll-indicator" href="#discord" aria-label="Scroll to the next section"></a>
+    </section>
+
+    <!-- ========================= INFINITE TICKER STRIP ======================= -->
+    <div class="ticker" data-marquee aria-hidden="true">
+      <div class="marquee-track">
+        <span class="ticker-item">AETHERISTTTK IN STOCK</span><span class="ticker-star">✦</span>
+        <span class="ticker-item">INSTANT DELIVERY</span><span class="ticker-star">✦</span>
+        <span class="ticker-item">€7.00</span><span class="ticker-star">✦</span>
+        <span class="ticker-item">JOIN THE DISCORD</span><span class="ticker-star">✦</span>
+      </div>
+    </div>
+
+    <!-- ====================== 5.5 DISCORD COMMUNITY ========================= -->
+    <section class="section discord-section" id="discord" data-spy-section>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">THE SERVER</span>
+          <h2 class="section-title">One Discord. <span class="gradient-text">Everything</span> Inside.</h2>
+          <p class="section-sub">The marketplace lives on Discord — verification, tickets, restock pings and community showcases, all under one roof.</p>
+        </div>
+
+        <div class="discord-grid">
+          <!-- Channel layout mockup -->
+          <div class="dc-panel glass-card glow-card" data-reveal>
+            <div class="dc-float-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M19.6 5.6A16.4 16.4 0 0 0 15.9 4.4l-.5 1a14.6 14.6 0 0 0-6.8 0l-.5-1A16.4 16.4 0 0 0 4.4 5.6C2.1 9 1.5 12.3 1.8 15.6a16.4 16.4 0 0 0 4.9 2.5l1.2-1.8c-.6-.2-1.1-.5-1.7-.8l.4-.3a11.6 11.6 0 0 0 9.8 0l.4.3c-.5.3-1.1.6-1.7.8l1.2 1.8a16.4 16.4 0 0 0 4.9-2.5c.4-3.8-.6-7.1-2.6-10zM9 13.7c-1 0-1.8-.9-1.8-2S8 9.7 9 9.7s1.8.9 1.8 2-.8 2-1.8 2zm6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>
+            </div>
+            <div class="dc-header">
+              <span class="dc-server-icon" aria-hidden="true">A</span>
+              <div>
+                <div class="dc-server-name">AETHERIST MARKET</div>
+                <div class="dc-server-meta"><span class="pulse-dot" aria-hidden="true"></span>1000+ MEMBERS · ONLINE NOW</div>
+              </div>
+            </div>
+
+            <div class="dc-channels" data-reveal-stagger>
+              <p class="dc-category">Getting Started</p>
+              <div class="dc-channel" style="--i:0"><span class="dc-hash">#</span> rules</div>
+              <div class="dc-channel" style="--i:1"><span class="dc-hash">#</span> verify <span class="dc-emoji">✅</span></div>
+              <div class="dc-channel" style="--i:2"><span class="dc-hash">#</span> links <span class="dc-emoji">🔗</span><span class="dc-badge">2</span></div>
+
+              <p class="dc-category">Marketplace</p>
+              <div class="dc-channel" style="--i:3"><span class="dc-hash">#</span> products <span class="dc-emoji">📦</span></div>
+              <div class="dc-channel" style="--i:4"><span class="dc-hash">#</span> restocks <span class="dc-emoji">🔄</span><span class="dc-badge">3</span></div>
+              <div class="dc-channel" style="--i:5"><span class="dc-hash">#</span> status <span class="dc-emoji">⚙️</span></div>
+
+              <p class="dc-category">Community</p>
+              <div class="dc-channel" style="--i:6"><span class="dc-hash">#</span> chat <span class="dc-emoji">💬</span></div>
+              <div class="dc-channel" style="--i:7"><span class="dc-hash">#</span> showcases <span class="dc-emoji">🖼️</span><span class="dc-badge">5</span></div>
+              <div class="dc-channel" style="--i:8"><span class="dc-hash">#</span> announcements <span class="dc-emoji">📣</span></div>
+
+              <p class="dc-category">Support</p>
+              <div class="dc-channel" style="--i:9"><span class="dc-hash">#</span> support <span class="dc-emoji">🎫</span></div>
+            </div>
+          </div>
+
+          <!-- Copy + CTA -->
+          <div class="dc-copy" data-reveal>
+            <h3>Built Like a Real <span class="gradient-text">Marketplace</span></h3>
+            <p>Every order runs through our ticket system. You verify, you open a ticket in <strong class="mono">#support</strong>, you pay an authorized staff member — and the product lands with you instantly.</p>
+            <p>Watching for a restock? <strong class="mono">#restocks</strong> pings the second inventory moves. Want proof before you buy? <strong class="mono">#showcases</strong> is a wall of community vouches.</p>
+
+            <ul class="dc-perks">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Verified roles only</strong> — payments go to the Owner or an Exchanger, nobody else.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Instant delivery</strong> — right after your payment is confirmed in the ticket.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>24/7 humans</strong> — tickets answered around the clock, usually in minutes.</span></li>
+            </ul>
+
+            <a class="btn btn-primary btn-lg" data-magnetic data-cursor="JOIN"
+               href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer">Join the Server</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== 5.6 PRODUCT SHOWCASE (MONEY) ==================== -->
+    <section class="section product-section" id="product" data-spy-section>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">FLAGSHIP PRODUCT</span>
+          <h2 class="section-title">Meet <span class="gradient-text">AetheristTTK</span></h2>
+          <p class="section-sub">The flagship Aetherist product. Infinite stock, instant delivery, one flat price.</p>
+        </div>
+
+        <div class="product-stage">
+          <!-- Holographic 3D-tilt product card -->
+          <div class="product-card" data-tilt="9" data-reveal>
+            <div class="product-card-inner">
+              <div class="glare" aria-hidden="true"></div>
+              <div class="product-card-top">
+                <span class="tag-flagship" data-bind="p.tag">FLAGSHIP</span>
+                <span class="stock-badge"><span class="pulse-dot is-accent" aria-hidden="true"></span><span data-bind="p.stock">∞ In Stock</span></span>
+              </div>
+
+              <div class="product-art" aria-hidden="true">
+                <span class="twinkle" style="top:18%;left:22%"></span>
+                <span class="twinkle" style="top:28%;left:78%;animation-delay:0.7s"></span>
+                <span class="twinkle" style="top:72%;left:16%;animation-delay:1.3s"></span>
+                <span class="twinkle" style="top:66%;left:84%;animation-delay:2.1s"></span>
+                <span class="twinkle" style="top:12%;left:52%;animation-delay:1.8s"></span>
+                <svg viewBox="0 0 64 64">
+                  <defs>
+                    <linearGradient id="lga" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#8B5CF6">
+                        <animate attributeName="stop-color" values="#8B5CF6;#A855F7;#22D3EE;#8B5CF6" dur="7s" repeatCount="indefinite"/>
+                      </stop>
+                      <stop offset="1" stop-color="#22D3EE">
+                        <animate attributeName="stop-color" values="#22D3EE;#60A5FA;#A855F7;#22D3EE" dur="7s" repeatCount="indefinite"/>
+                      </stop>
+                    </linearGradient>
+                    <filter id="pga" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="2.6" result="b"/>
+                      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                  </defs>
+                  <g filter="url(#pga)">
+                    <path d="M32 4 L60 60 H47.2 L32 27.5 L16.8 60 H4 Z" fill="url(#lga)"/>
+                    <path d="M21.5 42.5 H42.5 L45.5 49.5 H18.5 Z" fill="url(#lga)"/>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="product-info">
+                <h3 data-bind="p.name">AetheristTTK</h3>
+                <p class="product-desc" data-bind="p.desc">The flagship Aetherist product. Instant delivery after confirmed payment.</p>
+                <div class="product-buy-row">
+                  <span class="price" data-bind="p.price">€7.00</span>
+                  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+                    <button class="quickview-btn" type="button" data-quickview="aetheristttk" data-cursor="VIEW">Quick View</button>
+                    <a class="btn btn-primary" data-bind-buy data-cursor="BUY"
+                       href="https://aetherist-market.mysellauth.com/" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side panel -->
+          <div class="product-side">
+            <div class="why-card glass-card glow-card" data-reveal>
+              <h3>Why <span class="gradient-text">AetheristTTK</span>?</h3>
+              <ul class="why-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Instant delivery</strong> — sent right after confirmed payment.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>∞ In Stock</strong> — always available, always €7.00 flat.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Verified sellers</strong> — pay only the Owner or an Exchanger.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>24/7 support</strong> — dedicated ticket channel on Discord.</span></li>
+              </ul>
+            </div>
+
+            <!-- Coming-soon locked cards (from products.json) -->
+            <div id="coming-soon" data-reveal-stagger></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5.7 FEATURES BENTO GRID ========================= -->
+    <section class="section features-section" id="features" data-spy-section>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">WHY AETHERIST</span>
+          <h2 class="section-title">Everything a Shop <span class="gradient-text">Should Be</span></h2>
+          <p class="section-sub">No dead chat, no ghosting, no mystery sellers. Just a system that works at 3am.</p>
+        </div>
+        <div class="bento" id="features-grid" data-reveal-stagger></div>
+      </div>
+    </section>
+
+    <!-- ==================== 5.8 HOW IT WORKS — 4 STEPS ====================== -->
+    <section class="section steps-section" id="how">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">THE PROCESS</span>
+          <h2 class="section-title">From Ticket to <span class="gradient-text">Product</span> in Minutes</h2>
+          <p class="section-sub">Four steps. No middlemen, no mystery fees, no waiting rooms.</p>
+        </div>
+
+        <div class="steps">
+          <svg class="steps-line" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="stepsGradient" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#8B5CF6"/>
+                <stop offset="0.5" stop-color="#A855F7"/>
+                <stop offset="1" stop-color="#22D3EE"/>
+              </linearGradient>
+            </defs>
+            <line x1="0" y1="2" x2="1000" y2="2"/>
+            <line class="steps-path-progress" id="steps-path" x1="0" y1="2" x2="1000" y2="2"/>
+          </svg>
+
+          <div class="step" data-reveal>
+            <div class="step-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="step-card glass-card">
+              <h3>01 · Join the Discord</h3>
+              <p><a href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer">Join the server</a> and complete verification to unlock every channel.</p>
+            </div>
+          </div>
+
+          <div class="step" data-reveal style="--reveal-delay:100ms">
+            <div class="step-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <div class="step-card glass-card">
+              <h3>02 · Verify & Open a Ticket</h3>
+              <p>Open a ticket in <strong class="mono">#support</strong> and tell us what you want. A staff member picks it up fast.</p>
+            </div>
+          </div>
+
+          <div class="step" data-reveal style="--reveal-delay:200ms">
+            <div class="step-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="step-card glass-card">
+              <h3>03 · Pay Authorized Staff</h3>
+              <p>Pay <strong>only</strong> the Owner or an <strong>Exchanger</strong> role — PayPal F&F, no notes. Check roles before paying.</p>
+            </div>
+          </div>
+
+          <div class="step" data-reveal style="--reveal-delay:300ms">
+            <div class="step-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+            <div class="step-card glass-card">
+              <h3>04 · Receive Instantly</h3>
+              <p>Product delivered the moment your payment is confirmed. <a href="pages/terms.html">Read full terms</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5.9 LIVE STATUS PREVIEW ========================= -->
+    <section class="section status-section" id="status" data-spy-section>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">LIVE STATUS</span>
+          <h2 class="section-title">All Systems <span class="gradient-text">Operational</span></h2>
+          <p class="section-sub">The same transparency we run in #status, mirrored on a public page.</p>
+        </div>
+
+        <div class="status-widget glass-card glow-card" data-reveal>
+          <div class="status-widget-head">
+            <span class="status-ok"><span class="pulse-dot" aria-hidden="true"></span>All Systems Operational</span>
+            <span class="status-meta">PING: <b data-ping>23ms</b> · UPTIME: <b>99.9%</b> · LAST UPDATE: <b>just now</b></span>
+          </div>
+          <div class="uptime-strip" data-bars="90" data-amber="2" role="img" aria-label="90 day uptime history"></div>
+          <div class="status-widget-foot">
+            <span class="status-meta mono">DELIVERY QUEUE: <b>0 delayed</b> · TICKETS: <b>~2 min avg. reply</b></span>
+            <a class="btn btn-glass btn-sm" href="pages/status.html" data-cursor="VIEW">View Full Status</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== 5.10 REVIEWS / VOUCH WALL ======================= -->
+    <section class="section reviews-section" id="reviews" data-spy-section>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">PROOF, NOT PROMISES</span>
+          <h2 class="section-title">The Vouch <span class="gradient-text">Wall</span></h2>
+          <p class="section-sub">Real posts from real customers. Every verified purchase is one more receipt on the wall.</p>
+        </div>
+
+        <div class="vouch-wall" id="vouch-wall" data-reveal aria-label="Customer vouches"></div>
+
+        <div class="reviews-cta" data-reveal>
+          <a class="btn btn-primary" data-cursor="JOIN" href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer">See More Vouches in #showcases</a>
+          <a class="btn btn-glass" href="pages/reviews.html" data-cursor="VIEW">Full Reviews Page</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 5.11 YOUTUBE SECTION ========================= -->
+    <section class="section youtube-section" id="youtube">
+      <div class="container">
+        <div class="youtube-card glass-card glow-card" data-reveal>
+          <div class="yt-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+          </div>
+          <h3>Showcases, Updates & Scripts — <span class="gradient-text">On YouTube</span></h3>
+          <p class="yt-handle mono">@NiksScripts</p>
+          <p style="max-width:480px;margin:0 auto 30px">Watch product showcases, update walkthroughs and behind-the-scenes drops on the official channel.</p>
+          <a class="btn btn-youtube btn-lg yt-sub" data-magnetic data-cursor="VIEW"
+             href="https://www.youtube.com/@NiksScripts" target="_blank" rel="noopener noreferrer">
+            <span>Visit YouTube Channel</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== 5.12 FAQ ================================= -->
+    <section class="section faq-section" id="faq" data-spy-section>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-eyebrow">QUESTIONS</span>
+          <h2 class="section-title">Before You <span class="gradient-text">Ask</span></h2>
+          <p class="section-sub">The answers 99% of tickets start with — loaded straight from <span class="mono">faq.json</span>.</p>
+        </div>
+
+        <div class="faq-list" id="faq-list" data-reveal></div>
+
+        <p class="faq-more" data-reveal>
+          Still stuck? Read the <a href="pages/terms.html">full Terms of Service</a> or open a ticket on
+          <a href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer">Discord</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================== 5.13 FINAL CTA ============================== -->
+    <section class="section cta-section" id="join">
+      <div class="cta-aurora" aria-hidden="true"></div>
+      <div class="container cta-inner">
+        <span class="eyebrow" data-reveal><span class="pulse-dot" aria-hidden="true"></span>INSTANT. TRUSTED. AETHERIST.</span>
+        <h2 class="cta-title" data-reveal>Ready to Enter the <span class="gradient-text glitch-hover" data-text="AETHER?">AETHER?</span></h2>
+        <div class="cta-buttons" data-reveal-stagger>
+          <a class="btn btn-primary btn-lg" data-magnetic data-cursor="BUY" href="https://aetherist-market.mysellauth.com/" target="_blank" rel="noopener noreferrer">Visit Shop</a>
+          <a class="btn btn-glass btn-lg" data-magnetic data-cursor="JOIN" href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer">Join Discord</a>
+          <a class="btn btn-youtube btn-lg" data-magnetic data-cursor="VIEW" href="https://www.youtube.com/@NiksScripts" target="_blank" rel="noopener noreferrer">Watch YouTube</a>
+        </div>
+        <p class="cta-caption" data-reveal>By using Aetherist Market you accept the <a href="pages/terms.html">Terms of Service</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================== 5.14 FOOTER ================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#hero" aria-label="Aetherist Market — back to top">
+            <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <linearGradient id="lgf" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#8B5CF6"/>
+                  <stop offset="0.5" stop-color="#A855F7"/>
+                  <stop offset="1" stop-color="#22D3EE"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 4 L60 60 H47.2 L32 27.5 L16.8 60 H4 Z" fill="url(#lgf)"/>
+              <path d="M21.5 42.5 H42.5 L45.5 49.5 H18.5 Z" fill="url(#lgf)"/>
+            </svg>
+            <span class="brand-name">AETHERIST</span>
+          </a>
+          <p>Premium digital products. Instant delivery. 24/7 support. The marketplace that never sleeps.</p>
+          <p class="footer-slogan">ENTER THE AETHER</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="#hero">Home</a>
+          <a href="#product">Product</a>
+          <a href="#features">Features</a>
+          <a href="pages/status.html">Status</a>
+          <a href="pages/reviews.html">Reviews</a>
+          <a href="pages/help.html">Help Center</a>
+          <a href="pages/terms.html">Terms of Service</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community</h4>
+          <a href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer" data-toast="Opening Discord..." data-cursor="JOIN">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M19.6 5.6A16.4 16.4 0 0 0 15.9 4.4l-.5 1a14.6 14.6 0 0 0-6.8 0l-.5-1A16.4 16.4 0 0 0 4.4 5.6C2.1 9 1.5 12.3 1.8 15.6a16.4 16.4 0 0 0 4.9 2.5l1.2-1.8c-.6-.2-1.1-.5-1.7-.8l.4-.3a11.6 11.6 0 0 0 9.8 0l.4.3c-.5.3-1.1.6-1.7.8l1.2 1.8a16.4 16.4 0 0 0 4.9-2.5c.4-3.8-.6-7.1-2.6-10zM9 13.7c-1 0-1.8-.9-1.8-2S8 9.7 9 9.7s1.8.9 1.8 2-.8 2-1.8 2zm6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>
+            Discord Server
+          </a>
+          <a href="https://www.youtube.com/@NiksScripts" target="_blank" rel="noopener noreferrer" data-toast="Opening YouTube..." data-cursor="VIEW">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.3-.4-4.8a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.4A2.5 2.5 0 0 0 1.4 7.2C1 8.7 1 12 1 12s0 3.3.4 4.8c.2.9.9 1.6 1.8 1.8 1.5.4 8.8.4 8.8.4s7.3 0 8.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.8.4-4.8ZM9.8 15.3V8.7L15.9 12l-6.1 3.3Z"/></svg>
+            YouTube Channel
+          </a>
+          <a href="https://aetherist-market.mysellauth.com/" target="_blank" rel="noopener noreferrer" data-toast="Opening the shop..." data-cursor="BUY">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Official Shop
+          </a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="pages/terms.html">Terms of Service</a>
+          <span>By using this site, joining the server or purchasing, you accept our <a href="pages/terms.html">Terms</a>.</span>
+          <button class="quickview-btn" type="button" data-modal-open="modal-tos" style="margin-top:8px">Accept Terms</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 Aetherist Market. All rights reserved.</span>
+        <span>Not affiliated with Discord Inc.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================= BACK TO TOP / THEME ============================ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 54 54" aria-hidden="true">
+      <circle class="ring-progress" cx="27" cy="27" r="24"/>
+    </svg>
+    <svg class="arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+  </button>
+
+  <div class="theme-switcher">
+    <button class="theme-toggle" data-theme-toggle aria-label="Switch accent color" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+      </svg>
+    </button>
+    <div class="theme-panel" role="group" aria-label="Accent presets">
+      <button class="theme-swatch swatch-purple is-active" data-accent-set="purple" aria-label="Purple accent"></button>
+      <button class="theme-swatch swatch-cyan" data-accent-set="cyan" aria-label="Cyan accent"></button>
+      <button class="theme-swatch swatch-violet" data-accent-set="violet" aria-label="Violet accent"></button>
+    </div>
+  </div>
+
+  <!-- ============================ QUICK VIEW MODAL =========================== -->
+  <div class="modal-overlay" id="modal-quickview" role="dialog" aria-modal="true" aria-labelledby="qv-title" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" data-modal-close aria-label="Close quick view">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <p class="modal-kicker">Product Quick View</p>
+      <h3 id="qv-title">AetheristTTK</h3>
+      <span class="stock-badge" style="margin:12px 0 18px"><span class="pulse-dot is-accent" aria-hidden="true"></span><span id="qv-stock">∞ In Stock</span></span>
+      <p id="qv-desc" style="margin-bottom:20px">The flagship Aetherist product. Instant delivery after confirmed payment.</p>
+      <p style="margin-bottom:24px">Delivery is instant after confirmed payment. Pay only the Owner or an Exchanger role — PayPal F&amp;F, no notes.</p>
+      <div class="modal-actions">
+        <a class="btn btn-primary" id="qv-buy" href="https://aetherist-market.mysellauth.com/" target="_blank" rel="noopener noreferrer" data-cursor="BUY">Buy Now — <span id="qv-price">€7.00</span></a>
+        <a class="btn btn-glass" href="https://discord.gg/s4m9avEfaC" target="_blank" rel="noopener noreferrer" data-cursor="JOIN">Join Discord</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ TOS ACCEPT MODAL =========================== -->
+  <div class="modal-overlay" id="modal-tos" role="dialog" aria-modal="true" aria-labelledby="tos-title" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" data-modal-close aria-label="Close terms acceptance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <p class="modal-kicker">Legal</p>
+      <h3 id="tos-title">Accept the Terms</h3>
+      <p style="margin-top:10px">Confirm that you have read and accept the Aetherist Market Terms of Service — including payment rules, the no-refund policy and product risk notice.</p>
+      <div class="modal-check">
+        <input type="checkbox" id="tos-check">
+        <label for="tos-check"><strong>I have read the Terms of Service.</strong>I understand all purchases are final and every product is used at my own risk.</label>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary btn-block" id="tos-accept-btn" disabled>Accept &amp; Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+  <!-- ================================ SCRIPTS ================================ -->
+  <script src="assets/js/particles.js" defer></script>
+  <script src="assets/js/cursor.js" defer></script>
+  <script src="assets/js/typewriter.js" defer></script>
+  <script src="assets/js/tilt.js" defer></script>
+  <script src="assets/js/marquee.js" defer></script>
+  <script src="assets/js/navbar.js" defer></script>
+  <script src="assets/js/modal.js" defer></script>
+  <script src="assets/js/toast.js" defer></script>
+  <script src="assets/js/status.js" defer></script>
+  <script src="assets/js/faq.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
+
