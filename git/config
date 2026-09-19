@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	name = HolexDeveloper
+	email = 112nik223nik3345@proton.me
+[remote "origin"]
+	url = https://github.com/HolexDeveloper/aetherist-market.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
